@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translate Page</title>
+</head>
+<body>
+    <div>
+        <img id="videoElement" width="640" height="480">
+    </div>
+    <script>
+        // 웹캠 스트리밍을 보이도록 설정
+        var video = document.getElementById("videoElement");
+
+        // Django view의 URL을 사용하여 스트리밍 영상 가져오기
+        video.src = "{% url 'hand_gesture' %}";
+    </script>
+</body>
+</html>
